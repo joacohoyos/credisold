@@ -4,30 +4,36 @@
  * Todo el texto de la landing vive acá: para cambiar una frase, un teléfono
  * o una pregunta frecuente no hace falta tocar los componentes.
  *
- * ⚠️  Los datos de contacto se tomaron de la web y la página de Facebook
- *     actuales de CrediSold. Confirmalos antes de publicar.
+ * Los datos provienen del material gráfico de CrediSold.
+ * Ojo: el WhatsApp y el teléfono de línea son números DISTINTOS.
  */
 
-const PHONE_E164 = "5491177054394"
+/** Celular con WhatsApp: 11 6407-9125 (el 9 va porque es móvil). */
+const WHATSAPP_E164 = "5491164079125"
+/** Teléfono de línea: 11 7705-4394. */
+const PHONE_E164 = "541177054394"
 
 /** Arma un enlace de WhatsApp con un mensaje ya escrito. */
 export function waLink(message: string) {
-  return `https://wa.me/${PHONE_E164}?text=${encodeURIComponent(message)}`
+  return `https://wa.me/${WHATSAPP_E164}?text=${encodeURIComponent(message)}`
 }
 
 export const site = {
   name: "CrediSold",
   tagline: "Préstamos en efectivo",
+  slogan: "Tu necesidad es nuestra prioridad",
   description:
-    "Préstamos personales en efectivo en Guillermo E. Hudson y zona sur. Requisitos simples, trato personal y la plata en el día.",
+    "Préstamos en efectivo en Guillermo E. Hudson y zona sur. Rápidos, fáciles y sin vueltas: para empleados, jubilados y planes sociales.",
   url: "https://credisold.com.ar",
 
   contact: {
-    phoneLabel: "+54 11 7705-4394",
+    phoneLabel: "11 7705-4394",
     phoneHref: `tel:+${PHONE_E164}`,
+    whatsappLabel: "11 6407-9125",
     whatsapp: waLink("¡Hola CrediSold! Quiero consultar por un préstamo."),
     email: "perezsoldano@gmail.com",
-    address: "Calle 131 N° 5261",
+    address: "Barrio Marítimo, Calle 131 N° 5261",
+    addressExtra: "Galería La Rosa",
     city: "Guillermo E. Hudson, Buenos Aires",
     // ⚠️ Horario de ejemplo: confirmar el real antes de publicar.
     hours: "Lunes a viernes de 9 a 18 h · Sábados de 9 a 13 h",
@@ -36,7 +42,7 @@ export const site = {
 
   nav: [
     { label: "Simulador", href: "#simulador" },
-    { label: "Beneficios", href: "#beneficios" },
+    { label: "Quiénes pueden", href: "#para-quien" },
     { label: "Cómo funciona", href: "#como-funciona" },
     { label: "Requisitos", href: "#requisitos" },
     { label: "Preguntas", href: "#preguntas" },
@@ -44,11 +50,20 @@ export const site = {
 
   hero: {
     eyebrow: "Préstamos en efectivo en Hudson y zona sur",
-    title: "Tu crédito, en efectivo y en el día.",
+    title: "Préstamos en efectivo,",
+    titleAccent: "rápidos y sin vueltas.",
     subtitle:
-      "En CrediSold te damos el préstamo que necesitás con trato personal, requisitos simples y la plata en la mano. Sin bancos, sin trámites eternos.",
+      "Te damos el préstamo que necesitás con trato personal y requisitos simples. Traés el DNI y el recibo, y salís con la plata en la mano.",
     highlights: ["Atención cara a cara", "Requisitos mínimos", "Respuesta el mismo día"],
   },
+
+  /** A quiénes les presta CrediSold. */
+  audiences: [
+    { icon: "Landmark", title: "Empleados públicos y privados" },
+    { icon: "UserRound", title: "Jubilados nacionales y provinciales" },
+    { icon: "Users", title: "Plan Jefes y Jefas" },
+    { icon: "HeartHandshake", title: "Planes sociales" },
+  ],
 
   benefits: [
     {
@@ -59,7 +74,7 @@ export const site = {
     {
       icon: "ClipboardCheck",
       title: "Requisitos simples",
-      body: "DNI y comprobante de ingresos. Nada de carpetas interminables ni garantes imposibles.",
+      body: "DNI, recibo de sueldo y una boleta de servicio. Nada de carpetas interminables ni garantes.",
     },
     {
       icon: "Handshake",
@@ -79,7 +94,7 @@ export const site = {
     {
       icon: "MapPin",
       title: "Cerca tuyo",
-      body: "Estamos en Hudson y atendemos toda la zona sur. Vení al local o escribinos por WhatsApp.",
+      body: "Estamos en la Galería La Rosa, Barrio Marítimo. Vení al local o escribinos por WhatsApp.",
     },
   ],
 
@@ -98,12 +113,7 @@ export const site = {
     },
   ],
 
-  requirements: [
-    "DNI argentino vigente",
-    "Ser mayor de 18 años",
-    "Comprobante de ingresos (recibo de sueldo, monotributo o jubilación)",
-    "Constancia de domicilio o una factura de servicio a tu nombre",
-  ],
+  requirements: ["DNI", "Último recibo de sueldo", "Boletas de gas, luz o teléfono"],
 
   faqs: [
     {
@@ -111,12 +121,12 @@ export const site = {
       a: "En la mayoría de los casos te respondemos el mismo día. Si venís con la documentación completa, podés salir del local con el efectivo.",
     },
     {
-      q: "¿Necesito recibo de sueldo?",
-      a: "Necesitamos algún comprobante de ingresos, pero no tiene que ser un recibo de sueldo en relación de dependencia. Sirve constancia de monotributo, recibo de jubilación u otros ingresos demostrables. Consultanos tu caso.",
+      q: "¿Trabajan con jubilados y planes sociales?",
+      a: "Sí. Damos préstamos a empleados públicos y privados, jubilados nacionales y provinciales, Plan Jefes y Jefas y planes sociales.",
     },
     {
-      q: "¿Trabajan con monotributistas y jubilados?",
-      a: "Sí. Evaluamos cada situación por separado para armar un plan de cuotas que se ajuste a tus ingresos.",
+      q: "¿Qué documentación tengo que llevar?",
+      a: "El DNI, tu último recibo de sueldo (o comprobante de jubilación o del plan que cobrás) y una boleta de gas, luz o teléfono.",
     },
     {
       q: "¿Cómo pago las cuotas?",
@@ -138,8 +148,8 @@ export const site = {
  *
  * ⚠️ IMPORTANTE: `monthlyRate` es una tasa mensual de EJEMPLO, usada sólo para
  *    mostrar un número orientativo en pantalla. Reemplazala por la tasa real
- *    antes de publicar, o pedile al desarrollador que la conecte con tu sistema.
- *    La landing aclara en todo momento que el cálculo es estimativo.
+ *    antes de publicar. La landing aclara en todo momento que el cálculo
+ *    es estimativo y que no constituye una oferta de crédito.
  */
 export const simulator = {
   minAmount: 50_000,

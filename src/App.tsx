@@ -1,3 +1,4 @@
+import { Audiences } from "@/components/sections/audiences"
 import { Benefits } from "@/components/sections/benefits"
 import { Contact } from "@/components/sections/contact"
 import { Faq } from "@/components/sections/faq"
@@ -23,6 +24,7 @@ export default function App() {
       <main id="contenido">
         <Hero />
         <Benefits />
+        <Audiences />
         <HowItWorks />
         <Requirements />
         <Faq />

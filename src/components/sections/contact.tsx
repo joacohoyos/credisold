@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react"
+import { Clock, MapPin, MessageCircle, Phone } from "lucide-react"
 
 import { Reveal } from "@/components/reveal"
 import { Button } from "@/components/ui/button"
@@ -13,15 +13,15 @@ const channels: {
 }[] = [
   {
     icon: Phone,
-    label: "Teléfono",
+    label: "Teléfono (línea)",
     value: site.contact.phoneLabel,
     href: site.contact.phoneHref,
   },
   {
-    icon: Mail,
-    label: "Email",
-    value: site.contact.email,
-    href: `mailto:${site.contact.email}`,
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: site.contact.whatsappLabel,
+    href: site.contact.whatsapp,
   },
   {
     icon: MapPin,
@@ -29,6 +29,8 @@ const channels: {
     value: (
       <>
         {site.contact.address}
+        <br />
+        {site.contact.addressExtra}
         <br />
         {site.contact.city}
       </>
@@ -61,7 +63,7 @@ export function Contact() {
 
             <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
               <Button
-                variant="gold"
+                variant="red"
                 size="lg"
                 render={
                   <a href={site.contact.whatsapp} target="_blank" rel="noreferrer noopener">

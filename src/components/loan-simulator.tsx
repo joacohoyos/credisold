@@ -112,7 +112,7 @@ export function LoanSimulator({ className }: { className?: string }) {
         </div>
 
         <Button
-          variant="gold"
+          variant="red"
           size="lg"
           className="mt-6 w-full"
           render={

@@ -12,7 +12,7 @@ export function HowItWorks() {
 
       <div className="shell relative">
         <Reveal className="max-w-2xl">
-          <Badge variant="gold">En 3 pasos</Badge>
+          <Badge variant="red">En 3 pasos</Badge>
           <h2 className="mt-5 text-[clamp(2rem,4vw,2.9rem)] font-extrabold leading-[1.1] tracking-[-0.03em] text-balance">
             Del mensaje al efectivo, el mismo día.
           </h2>

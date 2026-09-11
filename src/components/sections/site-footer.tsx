@@ -59,7 +59,17 @@ export function SiteFooter() {
               <ul className="mt-4 space-y-2.5 text-sm">
                 <li>
                   <a href={site.contact.phoneHref} className="font-medium transition-colors hover:text-brand">
-                    {site.contact.phoneLabel}
+                    Línea {site.contact.phoneLabel}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={site.contact.whatsapp}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="font-medium transition-colors hover:text-brand"
+                  >
+                    WhatsApp {site.contact.whatsappLabel}
                   </a>
                 </li>
                 <li>
@@ -72,6 +82,8 @@ export function SiteFooter() {
                 </li>
                 <li className="leading-relaxed text-muted-foreground">
                   {site.contact.address}
+                  <br />
+                  {site.contact.addressExtra}
                   <br />
                   {site.contact.city}
                 </li>

@@ -31,13 +31,17 @@ npm run lint      # oxlint
 | Componentes de UI (botón, card, acordeón…) | `src/components/ui/` |
 | Título, descripción y metadatos para compartir | `index.html` |
 
+## Marca
+
+La paleta (azul marino `--brand` + rojo `--brand-red`), el logo y los datos salen del
+material gráfico de CrediSold. El isotipo se dibuja una sola vez en
+`src/components/brand/logo.tsx` y la misma geometría se reusa en `public/favicon.svg`,
+`public/apple-touch-icon.png` y `public/og-image.png`.
+
 ## Antes de publicar
 
-Estos valores se tomaron del sitio y la página de Facebook actuales. **Confirmalos**:
-
-- Teléfono / WhatsApp: `+54 11 7705-4394`
-- Email: `perezsoldano@gmail.com`
-- Dirección: Calle 131 N° 5261, Guillermo E. Hudson
+- **Ojo con los teléfonos**: el WhatsApp (`11 6407-9125`) y la línea (`11 7705-4394`)
+  son números distintos. Los botones de WhatsApp usan el celular.
 - **Horarios de atención** (`site.contact.hours`) — hoy hay un horario de ejemplo
 - **`simulator.monthlyRate`** — hoy es una tasa mensual de ejemplo (9 %) usada sólo
   para mostrar un número orientativo. Reemplazala por la real. La landing aclara en

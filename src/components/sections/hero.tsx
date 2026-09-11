@@ -30,14 +30,14 @@ export function Hero() {
 
           <Reveal delay={80}>
             <h1 className="mt-6 text-[clamp(2.5rem,6.2vw,4.25rem)] font-extrabold leading-[1.04] tracking-[-0.035em] text-balance">
-              Tu crédito, en efectivo{" "}
+              {site.hero.title}{" "}
               <span className="relative inline-block text-brand">
-                y en el día.
+                {site.hero.titleAccent}
                 <svg
                   aria-hidden
                   viewBox="0 0 300 12"
                   preserveAspectRatio="none"
-                  className="absolute left-0 top-[calc(100%-0.12em)] h-[0.16em] w-full text-gold"
+                  className="absolute left-0 top-[calc(100%-0.12em)] h-[0.16em] w-full text-brand-red"
                 >
                   <path
                     d="M3 8.6C64 3.6 152 2.4 297 5.8"

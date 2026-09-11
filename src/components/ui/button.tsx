@@ -10,9 +10,9 @@ const buttonVariants = cva(
       variant: {
         default:
           "bg-primary text-primary-foreground shadow-[0_10px_24px_-12px_color-mix(in_oklab,var(--brand)_85%,transparent)] hover:bg-[color-mix(in_oklab,var(--brand)_88%,black)]",
-        gold: "bg-gold text-gold-foreground shadow-[0_10px_24px_-12px_color-mix(in_oklab,var(--gold)_85%,transparent)] hover:bg-[color-mix(in_oklab,var(--gold)_90%,black)]",
+        red: "bg-brand-red text-brand-red-foreground shadow-[0_10px_24px_-12px_color-mix(in_oklab,var(--brand-red)_80%,transparent)] hover:bg-[color-mix(in_oklab,var(--brand-red)_90%,black)]",
         outline:
-          "border border-border bg-card/70 text-foreground backdrop-blur hover:border-brand/45 hover:bg-accent hover:text-accent-foreground",
+          "border border-border bg-card/70 text-foreground backdrop-blur hover:border-brand/40 hover:bg-accent hover:text-accent-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklab,var(--secondary)_88%,black)]",
         ghost: "text-foreground hover:bg-accent hover:text-accent-foreground",
         link: "text-brand underline-offset-4 hover:underline rounded-md",
