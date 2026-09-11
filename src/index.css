@@ -1,11 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 /* ------------------------------------------------------------------
    CrediSold — paleta de marca
    Azul marino + rojo, tomados del material gráfico de la empresa.
+   El sitio es sólo tema claro.
 ------------------------------------------------------------------ */
 :root {
   --radius: 0.85rem;
@@ -49,40 +48,6 @@
   --chart-3: oklch(0.55 0.12 258);
   --chart-4: oklch(0.7 0.13 40);
   --chart-5: oklch(0.42 0.1 270);
-}
-
-.dark {
-  color-scheme: dark;
-
-  --brand: oklch(0.715 0.128 264);
-  --brand-foreground: oklch(0.17 0.05 267);
-  --brand-soft: oklch(0.285 0.055 266);
-  --brand-deep: oklch(0.885 0.058 264);
-  --brand-red: oklch(0.665 0.202 27);
-  --brand-red-foreground: oklch(0.15 0.05 27);
-  --panel-dark: oklch(0.225 0.075 266);
-
-  --background: oklch(0.168 0.024 267);
-  --foreground: oklch(0.955 0.007 265);
-  --card: oklch(0.208 0.028 267);
-  --card-foreground: var(--foreground);
-  --popover: oklch(0.208 0.028 267);
-  --popover-foreground: var(--foreground);
-
-  --primary: var(--brand);
-  --primary-foreground: var(--brand-foreground);
-  --secondary: oklch(0.262 0.032 267);
-  --secondary-foreground: oklch(0.95 0.01 265);
-  --muted: oklch(0.258 0.028 267);
-  --muted-foreground: oklch(0.715 0.025 265);
-  --accent: oklch(0.288 0.045 266);
-  --accent-foreground: oklch(0.95 0.01 265);
-  --destructive: var(--brand-red);
-  --destructive-foreground: var(--brand-red-foreground);
-
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.715 0.128 264 / 45%);
 }
 
 @theme inline {
